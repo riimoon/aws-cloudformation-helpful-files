@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MySNSTopic:
+    Type: AWS::SNS::Topic
+    Properties: 
+      TopicName: #Enter your topic name 
+
+  MySNSSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Protocol: email #This is example 
+      Endpoint: #Enter your email if your protocol email
+      TopicArn: !Ref MySNSTopic

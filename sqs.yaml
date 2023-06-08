@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MySQSQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: 30
+      MessageRetentionPeriod: 7200
+      DelaySeconds: 0
+      ReceiveMessageWaitTimeSeconds: 0
+
+#This is my example you can choose what ever in 'VisibilityTimeout:', 'DelaySeconds:', 'ReceiveMessageWaitTimeSeconds:'.
